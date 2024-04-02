@@ -128,7 +128,6 @@ function App() {
         <span>n</span>
         <span>s</span>
       </div>
-      <div style={{width: '100%', height: '800px',backgroundSize: '100%', backgroundRepeat: 'no-repeat',backgroundImage: 'url(https://compote.slate.com/images/42a28ef8-0c06-43ba-a6a6-224854351fea.gif?crop=780%2C520%2Cx0%2Cy0&width=1920)'}}></div>
       <h1 style={{fontSize: "3rem", color:'#573805'}}>Things you should consider</h1>
       <ul style={{fontSize: '25px'}}>
         <li>The objective of hangman is to guess the secret word before the stick figure is hung.</li>
