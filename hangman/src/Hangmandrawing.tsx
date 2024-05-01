@@ -95,7 +95,6 @@ export function HangmanDrawing({ numberOfGuesses }: HangmanDrawingProps) {
   return (
     <div className="hangman-drawing-cont">
       {BODY_PARTS.slice(0, numberOfGuesses)}
-      {/* {HEAD} */}
       <div
         style={{
           height: "50px",
