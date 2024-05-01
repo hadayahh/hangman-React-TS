@@ -139,6 +139,12 @@ button#button:hover {
   }
 }
 
+@media (min-width: 430px) and (max-width: 600px) {
+  .hangman-rules {
+    transform: translateY(-125px);
+  }
+}
+
 @media (min-width: 901px) and (max-width: 2000px) {
   .gif {
     height: 405px;
