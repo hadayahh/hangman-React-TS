@@ -103,7 +103,7 @@ function App() {
 
   return (
     <>
-      {/* <div
+      <div
         style={{
           maxWidth: "1100px",
           display: "flex",
@@ -112,39 +112,48 @@ function App() {
           margin: "auto",
           alignItems: "center",
         }}
-      > */}
-      <MainHeading />
-      <SubHeading />
-      <HangmanGif />
-      <HangmanRules />
-      <h3 style={{ textAlign: "center", fontSize: "3rem", color: "#573805" }}>
-        Have at it!
-      </h3>
-      {isWinner ? winner() : null} {isLoser ? loser() : null}
-      <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
-      <HangmanWord
-        reveal={isLoser}
-        wordToGuess={wordToGuess}
-        guessedLetters={guessedLetters}
-      />
-      <div className="keyboard" style={{ alignSelf: "stretch" }}>
-        <Keyboard
-          disabled={isWinner || isLoser}
-          activeLetters={guessedLetters.filter((letter) =>
-            wordToGuess.includes(letter)
-          )}
-          inactiveLetters={incorrectLetters}
-          addGuessedLetter={addGuessedLetter}
-        />
-      </div>
-      <button
-        style={{ marginBottom: "50px" }}
-        id="button"
-        onClick={() => share()}
       >
-        Share with friends!
-      </button>
-      {/* </div> */}
+        <MainHeading />
+        <SubHeading />
+        <HangmanGif />
+        <HangmanRules />
+        <h3
+          style={{
+            textAlign: "center",
+            fontSize: "3rem",
+            color: "#573805",
+          }}
+        >
+          Have at it!
+        </h3>
+        {isWinner ? winner() : null} {isLoser ? loser() : null}
+        <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
+        <HangmanWord
+          reveal={isLoser}
+          wordToGuess={wordToGuess}
+          guessedLetters={guessedLetters}
+        />
+        <div
+          className="keyboard"
+          style={{ alignSelf: "stretch", width: "90%", margin: "auto" }}
+        >
+          <Keyboard
+            disabled={isWinner || isLoser}
+            activeLetters={guessedLetters.filter((letter) =>
+              wordToGuess.includes(letter)
+            )}
+            inactiveLetters={incorrectLetters}
+            addGuessedLetter={addGuessedLetter}
+          />
+        </div>
+        <button
+          style={{ marginBottom: "50px" }}
+          id="button"
+          onClick={() => share()}
+        >
+          Share with friends!
+        </button>
+      </div>
       <SoundFile />
     </>
   );
